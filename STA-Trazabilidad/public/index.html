@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>STA - Trazabilidad Alimentaria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    button {
+      background: #2c7be5;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1a5dcc;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sistema de Trazabilidad Alimentaria (STA)</h1>
+
+  <section>
+    <h3>Registrar Origen</h3>
+    <input id="lote" placeholder="Lote">
+    <input id="fecha" placeholder="Fecha de cosecha">
+    <input id="ubicacion" placeholder="Ubicación">
+    <button onclick="registrarOrigen()">Registrar Origen</button>
+  </section>
+
+  <section>
+    <h3>Registrar Transformación</h3>
+    <input id="lavado" placeholder="Lavado">
+    <input id="empaquetado" placeholder="Empaquetado">
+    <input id="calidad" placeholder="Control de calidad">
+    <button onclick="registrarTransformacion()">Registrar Transformación</button>
+  </section>
+
+  <section>
+    <h3>Registrar Logística</h3>
+    <input id="temperatura" placeholder="Temperatura">
+    <input id="entrega" placeholder="Fecha de entrega">
+    <button onclick="registrarLogistica()">Registrar Logística</button>
+  </section>
+
+  <section>
+    <h3>Consultar Trazabilidad</h3>
+    <button onclick="consultar()">Consultar</button>
+    <pre id="resultado"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
